@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<div class="container text-center">
+<h1>Generador de contrasenas</h1>
+
+<br>
+
+<form action="{% url 'contrasena' %}">
+	<select name="lenght">
+		<option value=6>6 caracteres</option>
+		<option value=7>7 caracteres</option>
+		<option value=8>8 caracteres</option>
+		<option value=9>9 caracteres</option>
+		<option value=10>10 caracteres</option>
+		<option value=11>11 caracteres</option>
+		<option value=12 selected="selected">12 caracteres</option> <!–– para que sea default 12 ––>
+		<option value=13>13 caracteres</option>
+		<option value=14>14 caracteres</option>
+	</select> Length
+	<br>
+	<br>
+	<input type="checkbox" name="numbers"> Digits
+	<br>
+	<input type="checkbox" name="uppercase"> Uppercase
+	<br>
+	<input type="checkbox" name="special"> SpecialChar
+	<br>
+	<br>
+	<input type="submit" value="Generar Password" class="btn btn-primary">
+
+
+
+</form>	
+
+<a href="{% url 'about' %}" class="btn btn-success"> About</a>
+<br>
+
+
+<div>
